@@ -1,0 +1,91 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry} % Adjust page margins
+\usepackage{xcolor,graphicx,framed}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{cases}
+\usepackage{gensymb}
+\usepackage{chemmacros}
+\setlength{\extrarowheight}{0.4cm}
+
+\begin{document}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.4mm}} % Defines a new command for the horizontal lines, change thickness here
+
+%----------------------------------------------------------------------------------------
+%	HEADING SECTIONS
+%----------------------------------------------------------------------------------------
+
+\begin{minipage}{0.7\textwidth}
+\begin{flushleft} 
+\textsc{Universidad del Valle de Guatemala \\
+Campus Central \\
+Facultad de Ciencias y Humanidades \\
+Departamento de Qu\'imica \\
+Segundo ciclo, 2014 \\
+Fisicoqu\'imica 1 \\
+}
+\end{flushleft}
+\end{minipage}
+~
+\begin{minipage}{0.2\textwidth}
+\begin{flushright}
+\includegraphics[scale=0.3]{Logo_UVG} % Include a department/university logo
+\end{flushright}
+\end{minipage}\\
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{center}
+\HRule \\[0.4cm]
+{ \bfseries Ejercicios en clase, 13}\\ % Title of your document
+\HRule \\[0.4cm]
+\end{center}
+
+%----------------------------------------------------------------------------------------
+
+\begin{enumerate}
+
+ \item \textit{(Chang 7.48)} Haga comentarios sobre cu\'al de los siguientes enunciados es verdadero o falso, y explique brevemente su respuesta:
+\begin{enumerate}
+ \item Si un componente de una soluci\'on obedece la ley de Raoult, entonces el otro componente tambi\'en debe obedecerla.
+ \item En las soluciones ideales, las fuerzas intermoleculares son peque\~nas.
+ \item Si se mezclan $15.0\;\mbox{mL}$ de una soluci\'on acuosa de etanol de $3.0\;\mbox{M}$ con $55.0\;\mbox{mL}$ de una soluci\'on acuosa de etanol de $3.0\;\mbox{M}$, el volumen total es de $70.0\;\mbox{mL}$.
+\end{enumerate} % Problema 7.48 de Chang
+
+ \item \textit{(Chang 7.36)} Una mezcla de los l\'iquidos $A$ y $B$ muestra un comportamiento ideal. A $84\,\celsius$ la presi\'on total de vapor de una soluci\'on que contiene $1.2\;\mbox{mol}$ de $A$ y $2.3\;\mbox{mol}$ de $B$ llega a $331\;\mbox{mmHg}$. Al agregar otro $mol$ de $B$ a la soluci\'on, la presi\'on de vapor aumenta a $347\;\mbox{mmHg}$. Calcule las presiones de vapor de $A$ y $B$ puros a $84\,\celsius$. % Problema 7.36 de Chang
+
+ \item \textit{(McQuarrie 24-22)} Las presiones de vapor del benceno y tolueno entre $80\,\celsius$ y $110\,\celsius$ en funci\'on de la temperatura en Kelvin est\'an dadas por las f\'ormulas emp\'iricas:
+$$\ln(P_{benceno}^\star/\mbox{torr})=-\frac{3856.6\;\mbox{K}}{T}+17.551$$
+y
+$$\ln(P_{tolueno}^\star/\mbox{torr})=-\frac{4514.6\;\mbox{K}}{T}+18.397$$
+Asumiendo que el benceno y el tolueno forman una soluci\'on ideal, usar estas f\'ormulas para construir el diagrama de temperatura-composici\'on de este sistema a una presi\'on ambiente de $760\;\mbox{torr}$. % Problema 10-22
+
+ \item \textit{(McQuarrie 24-48)} Una mezcla de triclorometano y acetona con $x_{acetona}=0.713$ tiene un presi\'on de vapor total de $220.5\;\mbox{torr}$ a $28.2\,\celsius$ y la fracci\'on molar de la acetona en el vapor es $y_{acetona}=0.818$. Dado que la presi\'on de vapor del triclorometano puro a $28.2\,\celsius$ es $221.8\;\mbox{torr}$, calcular la actividad y el coeficiente de actividad (basado en un estado est\'andar seg\'un la ley de Raoult) del triclorometano en la mezcla. Asumir comportamiento ideal para el vapor.  % Problema 10-48
+
+% \item \textit{(Chang 7.13)} Un minero que trabajaba a $900\;\mbox{pies}$ bajo la superficie tom\'o una bebida carbonatada durante el almuerzo. Para su sorpresa, la bebida parec\'ia muy quieta (es decir, no observ\'o mucha efervescencia al destaparla). Poco despu\'es del almuerzo, tom\'o el elevador hacia la superficie. Durante el trayecto de ascenso, sinti\'o gran urgencia de eructar. Explique este fen\'omeno. % Problema 7.13 de Chang
+
+% \item \textit{(Chang 7.47)} A $85\,\celsius$, la presi\'on de vapor de $A$ asciende a $566\;\mbox{torr}$ y la de $B$ a $250\;\mbox{torr}$. Calcule la composici\'on de una mezcla de $A$ y $B$ que hierve a $85\,\celsius$ cuando la presi\'on es de $0.60\;\mbox{atm}$. Calcule tambi\'en la composici\'on de la mezcla de vapor. Suponga un comportamiento ideal. % Problema 7.47 de Chang
+
+% \item \textit{(McQuarrie 24-20)} Las presiones de vapor del tetraclorometano (1) y el tricloroetileno (2) entre $76.8\,\celsius$ y $87.2\,\celsius$ pueden ser expresadas emp\'iricamente por las f\'ormulas:
+%$$\ln(P_1^\star/\mbox{torr})=15.8401-\frac{2790.78}{t+226.4}$$
+%y
+%$$\ln(P_2^\star/\mbox{torr})=15.0124-\frac{2345.4}{t+192.7}$$
+%donde $t$ es la temperatura en Celsius. Asumiendo que (1) y (2) forman una soluci\'on ideal para todo el rango de composiciones entre $76.8\,\celsius$ y $87.2\,\celsius$, calcular los valores de $x_1$ y $y_1$ a $82.0\,\celsius$ (a una presi\'on ambiental de $760\;\mbox{torr}$).  % Problema 10-20
+
+% \item \textit{(McQuarrie 24-26)} Suponer que las presiones de vapor de dos componentes de una soluci\'on binaria est\'an dados por:
+%$$P_1=x_1P_1^\star e^{x_2^2/2}$$
+%y
+%$$P_2=x_2P_2^\star e^{x_1^2/2}$$
+%Dados $P_1^\star=75.0\;\mbox{torr}$ y $P_2^\star=160\;\mbox{torr}$, calcular la presi\'on de vapor total y la composici\'on de la fase de vapor a $x_1=0.40$. % Problema 10-26
+
+% \item \textit{(McQuarrie 24-55)} Las cantidades termodin\'amicas en exceso son definidas en relaci\'on a los valores que las cantidades tendr\'ian si los componentes puros formaran una soluci\'on ideal a la misma temperatura y presi\'on dadas. Por ejemplo, se tiene que:
+%$$\frac{\bar{G}^E}{RT}=\frac{G^E}{(n_1+n_2)RT}=x_1\ln\gamma_1+x_2\ln\gamma_2$$
+%Mostrar que:
+%$$\frac{\bar{S}^E}{R}=\frac{S^E}{(n_1+n_2)R}=-(x_1\ln\gamma_1+x_2\ln\gamma_2)-T\left(x_1\frac{\partial\ln\gamma_1}{\partial T}+x_2\frac{\partial\ln\gamma_2}{\partial T}\right)$$ % Problema 10-55
+
+\end{enumerate}
+ 
+\end{document}

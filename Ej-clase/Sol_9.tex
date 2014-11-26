@@ -1,0 +1,251 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry} % Adjust page margins
+\usepackage{xcolor,graphicx,framed}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{cases}
+\usepackage{gensymb}
+\usepackage{chemmacros}
+\setlength{\extrarowheight}{0.4cm}
+
+\begin{document}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.4mm}} % Defines a new command for the horizontal lines, change thickness here
+
+%----------------------------------------------------------------------------------------
+%	HEADING SECTIONS
+%----------------------------------------------------------------------------------------
+
+\begin{minipage}{0.7\textwidth}
+\begin{flushleft} 
+\textsc{Universidad del Valle de Guatemala \\
+Campus Central \\
+Facultad de Ciencias y Humanidades \\
+Departamento de Qu\'imica \\
+Segundo ciclo, 2014 \\
+Fisicoqu\'imica 1 \\
+}
+\end{flushleft}
+\end{minipage}
+~
+\begin{minipage}{0.2\textwidth}
+\begin{flushright}
+\includegraphics[scale=0.3]{Logo_UVG} % Include a department/university logo
+\end{flushright}
+\end{minipage}\\
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{center}
+\HRule \\[0.4cm]
+{ \bfseries Soluciones propuestas a los ejercicios en clase, 9}\\ % Title of your document
+\HRule \\[0.4cm]
+\end{center}
+
+%----------------------------------------------------------------------------------------
+
+\begin{enumerate}
+
+ \item \textbf{\textit{(Chang 6.29)} Si se disuelve nitrato de amonio en agua, la soluci\'on se enfr\'ia. ?`Qu\'e conclusi\'on puede obtener acerca de $\Delta S^\standardstate$ del proceso?} % Problema 6.29 de Chang
+
+Como la soluci\'on se enfr\'ia, el sistema (la reacci\'on de disoluci\'on) le est\'a quitando energ\'ia a los alrededores (al agua) por medio de calor, de tal manera que la reacci\'on es endot\'ermica. Asumiendo que el proceso se lleva a cabo a presi\'on constante sin trabajo adicional (como hablan de un valor est\'andar, la presi\'on tiene que ser de $1\;\mbox{bar}$), entonces el signo de $\Delta H$ tiene que ser positivo tambi\'en. Adem\'as, como la reacci\'on sucede (nos indican que se disuelve), entonces es espont\'anea, as\'i que el signo de $\Delta G$ tiene que ser negativo. Como tenemos la relaci\'on de $\Delta G=\Delta H-T\Delta S$, para mantener los signos ya mencionados tiene que suceder que en esta reacci\'on $\Delta S$ es positiva (y la temperatura a la cual se lleva a cabo la reacci\'on es tal que el segundo t\'ermino predomina, es decir, $T\Delta S>\Delta H$). Entonces $\Delta S^\standardstate$ del proceso es positiva, con lo que la entrop\'ia del sistema aumenta.
+
+ \item \textbf{\textit{(Chang 6.5)} De manera aproximada podemos suponer que las prote\'inas existen en estado nativo (o que funcionan fisiol\'ogicamente) o en estado desnaturalizado. La entalp\'ia molar est\'andar y la entrop\'ia de desnaturalizaci\'on de una prote\'ina son $512\;\mbox{kJ}\cdot\mbox{mol}^{-1}$ y $1.60\;\mbox{kJ}\cdot\mbox{K}^{-1}\cdot\mbox{mol}^{-1}$, respectivamente. Explique los signos y magnitudes de estas cantidades y calcule la temperatura a la cual el proceso de desnaturalizaci\'on se hace espont\'aneo.} % Problema 6.5 de Chang
+
+El signo positivo de la entalp\'ia molar est\'andar indica que el proceso de desnaturalizaci\'on es endot\'ermico, es decir, absorbe energ\'ia en forma de calor mientras sucede, lo que indica que en t\'erminos energ\'eticos, el sistema desnaturalizado posee m\'as energ\'ia que en estado nativo. El signo positivo de la entrop\'ia molar est\'andar indica que el proceso de desnaturalizaci\'on aumenta la entrop\'ia del sistema (est\'a m\'as ``desordenado"). Como no cambiar\'ia de f\'ormula molecular, probablemente posee menos rigidez o es menos compacto en su estado desnaturalizado que en estado nativo. Las magnitudes se pueden comparar entre s\'i para indicar que el aumento de entrop\'ia no es tanto como el aumento de energ\'ia del sistema. 
+
+Como ambos son positivos, la reacci\'on es espont\'anea cuando $T\Delta S>\Delta H$, es decir, a altas temperaturas. La temperatura que establece el l\'imite a partir del cual el proceso se hace espont\'aneo es la temperatura a la cual est\'a en equilibrio, es decir:
+$$\Delta G=0\;\Rightarrow\; 0=\Delta H-T\Delta S\;\rightarrow\;T\Delta S=\Delta H$$
+Despejando para $T$:
+$$T=\frac{\Delta H}{\Delta S}=\frac{512\;\mbox{kJ}\cdot\mbox{mol}^{-1}}{1.60\;\mbox{kJ}\cdot\mbox{K}^{-1}\cdot\mbox{mol}^{-1}}=320\;\mbox{K}$$
+
+ \item \textbf{\textit{(McQuarrie 22-2)} La entalp\'ia molar de vaporizaci\'on del benceno en su punto normal de ebullici\'on ($80.09\celsius$) es $30.72\;\mbox{kJ}\cdot\mbox{mol}^{-1}$. Tomar las capacidades molares del benceno l\'iquido y gaseoso como $136.3\;\mbox{J}\cdot\mbox{K}^{-1}\cdot\mbox{mol}^{-1}$ y $82.4\;\mbox{J}\cdot\mbox{K}^{-1}\cdot\mbox{mol}^{-1}$, respectivamente, para calcular el valor de $\Delta_{vap}\bar{G}$ a $75.0\celsius$, $80.09\celsius$ y $85.0\celsius$. Interpretar los resultados f\'isicamente.} % Problema 8-2
+
+La vaporizaci\'on en el punto normal de ebullici\'on es un proceso reversible, por lo que podemos calcular $\Delta_{vap}\bar{S}$ usando $\Delta_{vap}\bar{H}$ y $T_{b}=80.09\celsius+273.15=353.24\;\mbox{K}$, y usarlo para determinar $\Delta_{vap}\bar{G}$:
+$$\Delta_{vap}\bar{S}=\frac{\Delta_{vap}\bar{H}}{T_b}=\frac{30.72\;\mbox{kJ}\cdot\mbox{mol}^{-1}}{353.24\;\mbox{K}}=86.97\;\mbox{J}\cdot\mbox{K}^{-1}\cdot\mbox{mol}^{-1}$$
+Entonces:
+$$\Delta_{vap}\bar{G}=\Delta_{vap}\bar{H}-T_b\Delta_{vap}\bar{S}=30.72\;\mbox{kJ}\cdot\mbox{mol}^{-1}-(353.24\;\mbox{K})(86.97\;\mbox{J}\cdot\mbox{K}^{-1}\cdot\mbox{mol}^{-1})=0$$
+
+Para las otras dos temperaturas, podemos hacer uso de un ciclo y de los datos en el punto normal de ebullici\'on, de la siguiente manera:
+
+\begin{center}
+\begin{tabular}{r c c c l c | c}
+& & & & & \quad & T \\\hline
+& $\mbox{C}_6\mbox{H}_6\mbox{(l)}$ & $\xrightarrow{\Delta_{vap}H^\standardstate}$ & $\mbox{C}_6\mbox{H}_6\mbox{(g)}$ & & \quad\quad & $353.24\;\mbox{K}$ \\
+ ${\bar{C}_P\mbox{(l)}}$ & $\uparrow$ & & $\downarrow$ & ${\bar{C}_P\mbox{(g)}}$ & \quad\quad & \\
+& $\mbox{C}_6\mbox{H}_6\mbox{(l)}$ & $\xrightarrow{\Delta_{vap}H^\standardstate}$ & $\mbox{C}_6\mbox{H}_6\mbox{(g)}$ & & \quad\quad & $T$ \\\hline
+\end{tabular}
+\end{center}
+
+Como tanto $\Delta H$ como $\Delta S$ son funciones de estado, tendr\'iamos que (tomando las $C_P$ constantes):
+
+\begin{center}
+\begin{tabular}{r c l}
+$\Delta_{vap}\bar{H}(T)$ & $=$ & $\int_{T}^{353.24}\bar{C}_P^ldT+\Delta_{vap}\bar{H}(353.24)+\int_{353.24}^{T}\bar{C}_P^gdT$ \\
+& $=$ & $\bar{C}_P^l(353.24-T)+\Delta_{vap}\bar{H}(353.24)+\bar{C}_P^g(T-353.24)$ 
+\end{tabular}
+\end{center}
+
+Y:
+
+\begin{center}
+\begin{tabular}{r c l}
+$\Delta_{vap}\bar{S}(T)$ & $=$ & $\int_{T}^{353.24}\frac{\bar{C}_P^l}{T}dT+\Delta_{vap}\bar{S}(353.24)+\int_{353.24}^{T}\frac{\bar{C}_P^g}{T}dT$ \\
+& $=$ & $\bar{C}_P^l\ln\frac{353.24}{T}+\Delta_{vap}\bar{S}(353.24)+\bar{C}_P^g\ln\frac{T}{353.24}$
+\end{tabular}
+\end{center}
+
+As\'i que a $T=75.0\celsius+273.15=348.15\;\mbox{K}$ obtenemos lo siguiente:
+
+\begin{tabular}{r c l}
+$\Delta_{vap}\bar{H}(348)$ & $=$ & $(136.3\;\mbox{J}\cdot\mbox{K}^{-1}\cdot\mbox{mol}^{-1})(353.24\;\mbox{K}-348.15\;\mbox{K})+30.72\;\mbox{kJ}\cdot\mbox{mol}^{-1}$ \\
+& & $\quad+(82.4\;\mbox{J}\cdot\mbox{K}^{-1}\cdot\mbox{mol}^{-1})(348.15\;\mbox{K}-353.24\;\mbox{K})$ \\
+& $=$ & $30.99\;\mbox{kJ}\cdot\mbox{mol}^{-1}$ 
+\end{tabular}
+
+Y:
+
+\begin{tabular}{r c l}
+$\Delta_{vap}\bar{S}(T)$ & $=$ & $(136.3\;\mbox{J}\cdot\mbox{K}^{-1}\cdot\mbox{mol}^{-1})\ln\frac{353.24\;\mbox{K}}{348.15\;\mbox{K}}+86.97\;\mbox{J}\cdot\mbox{K}^{-1}\cdot\mbox{mol}^{-1}$ \\
+& & $\quad+(82.4\;\mbox{J}\cdot\mbox{K}^{-1}\cdot\mbox{mol}^{-1})\ln\frac{348.15\;\mbox{K}}{353.24\;\mbox{K}}$ \\
+& $=$ & $87.75\;\mbox{J}\cdot\mbox{K}^{-1}\cdot\mbox{mol}^{-1}$ 
+\end{tabular}
+
+Por lo que:
+
+\begin{tabular}{r c l}
+$\Delta_{vap}\bar{G}$ & $=$ & $\Delta_{vap}\bar{H}-T_b\Delta_{vap}\bar{S}=30.99\;\mbox{kJ}\cdot\mbox{mol}^{-1}-(348.15\;\mbox{K})(87.74\;\mbox{J}\cdot\mbox{K}^{-1}\cdot\mbox{mol}^{-1})$ \\
+& $=$ & $445\;\mbox{J}\cdot\mbox{mol}^{-1}$
+\end{tabular}
+
+Mientras que a $T=85.0\celsius+273.15=358.15\;\mbox{K}$ obtenemos lo siguiente:
+
+\begin{tabular}{r c l}
+$\Delta_{vap}\bar{H}(348)$ & $=$ & $(136.3\;\mbox{J}\cdot\mbox{K}^{-1}\cdot\mbox{mol}^{-1})(353.24\;\mbox{K}-358.15\;\mbox{K})+30.72\;\mbox{kJ}\cdot\mbox{mol}^{-1}$ \\
+& & $\quad+(82.4\;\mbox{J}\cdot\mbox{K}^{-1}\cdot\mbox{mol}^{-1})(358.15\;\mbox{K}-353.24\;\mbox{K})$ \\
+& $=$ & $30.46\;\mbox{kJ}\cdot\mbox{mol}^{-1}$ 
+\end{tabular}
+
+Y:
+
+\begin{tabular}{r c l}
+$\Delta_{vap}\bar{S}(T)$ & $=$ & $(136.3\;\mbox{J}\cdot\mbox{K}^{-1}\cdot\mbox{mol}^{-1})\ln\frac{353.24\;\mbox{K}}{358.15\;\mbox{K}}+86.97\;\mbox{J}\cdot\mbox{K}^{-1}\cdot\mbox{mol}^{-1}$ \\
+& & $\quad+(82.4\;\mbox{J}\cdot\mbox{K}^{-1}\cdot\mbox{mol}^{-1})\ln\frac{358.15\;\mbox{K}}{353.24\;\mbox{K}}$ \\
+& $=$ & $86.22\;\mbox{J}\cdot\mbox{K}^{-1}\cdot\mbox{mol}^{-1}$ 
+\end{tabular}
+
+Por lo que:
+
+\begin{tabular}{r c l}
+$\Delta_{vap}\bar{G}$ & $=$ & $\Delta_{vap}\bar{H}-T_b\Delta_{vap}\bar{S}=30.46\;\mbox{kJ}\cdot\mbox{mol}^{-1}-(358.15\;\mbox{K})(86.22\;\mbox{J}\cdot\mbox{K}^{-1}\cdot\mbox{mol}^{-1})$ \\
+& $=$ & $-425\;\mbox{J}\cdot\mbox{mol}^{-1}$
+\end{tabular}
+
+Con lo que se ve que a $75.0\celsius$ la vaporizaci\'on no es espont\'anea, a $80.09\celsius$ est\'a en equilibrio y a $85.0\celsius$ la vaporizaci\'on es espont\'anea.
+
+ \item \textbf{\textit{(Chang 6.1)} Una cantidad de $0.35\;\mbox{moles}$ de un gas ideal que se encuentra inicialmente a $15.6\celsius$ se dilata de $1.2\;\mbox{L}$ a $7.4\;\mbox{L}$. Calcular los valores de $w$, $q$, $\Delta U$, $\Delta S$ y $\Delta G$ si el proceso se lleva a cabo:}
+ \begin{enumerate}
+  \item \textbf{de manera isot\'ermica y reversible;}
+
+Para la expansi\'on isot\'ermica (con $T=15.6\celsius+273.15=288.75\;\mbox{K}$) de un gas ideal tenemos que: 
+$$\Delta T=0\;\Rightarrow\;\Delta U=q+w=0\;\mbox{ y }\;\Delta H=0$$
+El trabajo reversible lo podemos calcular con la ecuaci\'on de estado del gas ideal:
+
+\begin{tabular}{r c l}
+$w_{rev}$ & $=$ & $-\int_{V_1}^{V_2}PdV=-\int_{V_1}^{V_2}\frac{nRT}{V}dV=-nRT\int_{V_1}^{V_2}\frac{dV}{V}=-nRT\ln\frac{V_2}{V_1}$ \\
+& $=$ & $-(0.35\;\mbox{moles})(8.314\;\mbox{J}\cdot\mbox{K}^{-1}\cdot\mbox{mol}^{-1})(288.75\;\mbox{K})\ln\frac{7.4\;\mbox{L}}{1.2\;\mbox{L}}=-1.53\;\mbox{kJ}$
+\end{tabular}
+
+Y:
+$$q_{rev}=-w_{rev}=-(-1.53\;\mbox{kJ})=1.53\;\mbox{kJ}$$
+Entonces:
+$$\Delta S=\int\frac{dq_{rev}}{T}=\frac{1}{T}\int dq_{rev}=\frac{q_{rev}}{T}=\frac{1.53\;\mbox{kJ}}{288.75\;\mbox{K}}=5.29\;\mbox{J}\cdot\mbox{K}^{-1}$$
+Por \'ultimo:
+$$\Delta G=\Delta H-T\Delta S=0-(288.75\;\mbox{K})(5.29\;\mbox{J}\cdot\mbox{K}^{-1})=-1.53\;\mbox{kJ}$$
+
+  \item \textbf{de manera isot\'ermica e irreversible contra una presi\'on extrena de $1.0\;\mbox{atm}$.}
+
+Lo \'unico que cambia al no ser un proceso reversible, por no ser funciones de estado y que tenemos los mismos estados iniciales y finales que el caso anterior, es $q$ y $w$. El trabajo irreversible contra una presi\'on externa (constante) lo podemos calcular de la siguiente manera:
+
+\begin{tabular}{r c l}
+$w$ & $=$ & $-\int_{V_1}^{V_2}PdV=-P\int_{V_1}^{V_2}dV=-P\Delta V$ \\
+& $=$ & $-(1.0\;\mbox{atm})(7.4\;\mbox{L}-1.2\;\mbox{L})\left(\frac{8.314\;\mbox{J}\cdot\mbox{K}^{-1}\cdot\mbox{mol}^{-1}}{0.0821\;\mbox{L}\cdot\mbox{atm}\cdot\mbox{K}^{-1}\cdot\mbox{mol}^{-1}}\right)=-0.63\;\mbox{kJ}$
+\end{tabular}
+
+Y:
+$$q=-w=-(-0.63\;\mbox{kJ})=0.63\;\mbox{kJ}$$
+Mientras que las funciones de estado ($\Delta U$, $\Delta H$, $\Delta S$ y $\Delta G$) tienen el mismo valor que el inciso anterior.
+
+ \end{enumerate} % Problema 6.1 de Chang 
+
+ \item \textbf{\textit{(McQuarrie 22-18)} Mostrar que
+$$dH=\left[V-T\left(\frac{\partial V}{\partial T}\right)_P\right]dP+C_PdT$$ 
+?`Son $P$ y $T$ las variables naturales de $H$?} % Problema 8-18
+
+Considerando a $H$ en funci\'on de $P$ y $T$, tendr\'iamos:
+$$dH=\left(\frac{\partial H}{\partial P}\right)_TdP+\left(\frac{\partial H}{\partial T}\right)_PdT$$
+El segundo t\'ermino es $C_P$, as\'i que lo que tenemos que hacer es encontrar una expresi\'on equivalente del primer t\'ermino. Para hacer eso, podemos partir de la definici\'on de $G=H-TS$ y estudiar la variaci\'on con respecto la presi\'on a temperatura constante (la raz\'on de estudiar $G$ es por que sabemos que $(\partial G/\partial P)_T=V$ y la relaci\'on de Maxwell del diferencial de $dG$ es $(\partial S/\partial P)_T=-(\partial V/\partial T)_P$, expresiones que aparecen en lo que queremos encontrar):
+$$\left(\frac{\partial G}{\partial P}\right)_T=\left(\frac{\partial H}{\partial P}\right)_T-T\left(\frac{\partial S}{\partial P}\right)_T$$
+Del diferencial de $dG=-SdT+VdP$ tenemos que $(\partial G/\partial P)_T=V$, usando la relaci\'on de Maxwell de $dG$ ($(\partial S/\partial P)_T=-(\partial V/\partial T)_P$) y despejando para $(\partial H/\partial P)_T$ tenemos que:
+$$\left(\frac{\partial H}{\partial P}\right)_T=\left(\frac{\partial G}{\partial P}\right)_T+T\left(\frac{\partial S}{\partial P}\right)_T=V-T\left(\frac{\partial V}{\partial T}\right)_P$$
+Por lo que el diferencial queda:
+$$dH=\left[V-T\left(\frac{\partial V}{\partial T}\right)_P\right]dP+C_PdT$$
+Como el diferencial no tiene una forma simple como $dH=TdS+VdP$, ni $dH$ expresa si un sistema es espont\'aneo cuando $P$ y $T$ son constantes, $P$ y $T$ no son las variables naturales de $H$.
+
+ \item \textbf{\textit{(McQuarrie 22-54)} Cuando una goma el\'astica se estira, ejerce una fuerza de restauraci\'on, $f$, que est\'a dada en funci\'on de su longitud $L$ y de su temperatura $T$. El trabajo involucrado es:
+$$w=\int f(L,T)dL$$
+?`Por qu\'e no hay un signo negativo como con el trabajo $P-V$?}
+
+Para estirarla se necesita de energ\'ia (por lo que $dL$ positivo dar\'ia un $w$ positivo, es decir, la energ\'ia del sistema aumenta) mientras que al restaurar su longitud original liberar\'ia esa energ\'ia ($dL$ tendr\'ia signo negativo y $w$ tambi\'en), por lo que no es necesario que haya un signo negativo como en el trabajo $P-V$ (la situaci\'on ac\'a es inversa).
+
+ \begin{enumerate}
+  \item \textbf{Asumir que no hay cambio de volumen en la goma el\'astica cuando se estira; determinar $dU$ y derivarlo con respecto a $L$ a temperatura constante, para encontrar que:}
+$$\left(\frac{\partial U}{\partial L}\right)_T=T\left(\frac{\partial S}{\partial L}\right)_T+f$$
+
+Por la primera ley, tendr\'iamos que $dU=dq+dw$. El trabajo se puede considerar como un proceso reversible al separarlo en pasos infinitesimales que est\'an en equilibrio en cualquier momento, as\'i que para un proceso infinitesimal $dw=f(L,T)dL$ (no habr\'ia trabajo $P-V$ por no haber cambio de volumen) y la segunda ley nos dar\'ia para el proceso reversible $dq=TdS$, con lo que obtenemos:
+$$dU=TdS+fdL$$
+Derivando con respecto a $L$ a temperatura constante:
+$$\left(\frac{\partial U}{\partial L}\right)_T=T\left(\frac{\partial S}{\partial L}\right)_T+f\left(\frac{\partial L}{\partial L}\right)_T+\left(\frac{\partial f}{\partial L}\right)_TdL=T\left(\frac{\partial S}{\partial L}\right)_T+f$$
+Despreciando el t\'ermino multiplicado por $dL$ por ser muy peque\~no.
+
+  \item \textbf{Usando la definici\'on de $A=U-TS$ encontrar $dA$ para mostrar que su relaci\'on de Maxwell es:}
+$$\left(\frac{\partial f}{\partial T}\right)_L=-\left(\frac{\partial S}{\partial L}\right)_T$$
+\textbf{Sustituir la ecuaci\'on anterior en el resultado del inciso anterior para encontrar:}
+$$\left(\frac{\partial U}{\partial L}\right)_T=f-T\left(\frac{\partial f}{\partial T}\right)_L$$
+
+Usando $A=U-TS$, tendr\'iamos que:
+$$dA=dU-TdS-SdT=TdS+fdL-TdS-SdT=fdL-SdT$$
+Considerando entonces a $A(L,T)$, el diferencial anterior expresa a:
+$$dA=\left(\frac{\partial A}{\partial L}\right)_TdL+\left(\frac{\partial A}{\partial T}\right)_LdT$$
+Identificando a $(\partial A/\partial L)_T=f$ y $(\partial A/\partial T)_L=-S$. La relaci\'on de Maxwell del diferencial $dA$ es entonces:
+$$\left(\frac{\partial f}{\partial T}\right)_L=-\left(\frac{\partial S}{\partial L}\right)_T$$
+Sustituyendo este relaci\'on en el resultado del inciso anterior para cambiar $(\partial S/\partial L)_T$:
+$$\left(\frac{\partial U}{\partial L}\right)_T=f+T\left(\frac{\partial S}{\partial L}\right)_T=f-T\left(\frac{\partial f}{\partial T}\right)_L$$
+
+  \item \textbf{Para muchos sistemas el\'asticos, la dependencia observada de la fuerza con la temperatura es lineal. As\'i que podemos definir una goma el\'astica ideal como:}
+$$f=T\phi(L)\quad\quad\mbox{(goma elastica ideal)}$$
+\textbf{Mostrar que $(\partial U/\partial L)_T=0$ para una goma el\'astica ideal.}
+
+Usando la dependencia de la goma el\'astica ideal, podemos calcular lo siguiente:
+$$\left(\frac{\partial f}{\partial T}\right)_L=\left(\frac{\partial }{\partial T}\right)_L T\phi(L)=\phi(L)$$
+Por lo que:
+$$\left(\frac{\partial U}{\partial L}\right)_T=f-T\left(\frac{\partial f}{\partial T}\right)_L=T\phi(L)-T\phi(L)=0$$
+
+  \item \textbf{Ahora consideraremos qu\'e sucede cuando se estira la goma el\'astica r\'apidamente (es decir, adiab\'aticamente). En este caso $dU=dw$. Definiendo la capacidad calor\'ifica como $(\partial U/\partial T)_L=C_L$, usar el hecho que $U$ depende s\'olo de la temperatura para una goma el\'astica ideal para mostrar que:}
+$$C_LdT=fdL$$
+\textbf{Argumentar que si la goma el\'astica se estira r\'apidamente, su temperatura aumentar\'a. Verificar el resultado al colocar una goma el\'astica en contra del labio superior y estirarla r\'apidamente.}
+
+Considerando un estiramiento r\'apido, es posible pensar que no se de tiempo en que haya intercambio de calor con los alrededores, por lo que suceder\'ia adiab\'aticamente, por lo que $dq=0$, as\'i que $dU=dw=fdL$. Si consideramos a $U(T,L)$, tenemos que:
+$$dU=\left(\frac{\partial U}{\partial T}\right)_LdT+\left(\frac{\partial U}{\partial L}\right)_TdL$$
+Definiendo la capacidad calor\'ifica como $(\partial U/\partial T)_L=C_L$, usando $(\partial U/\partial L)_T=0$ y $dU=fdL$, tenemos que:
+$$C_LdT=fdL$$
+
+Tanto $C_L$ como $f$ son positivos, con lo que se ve que si aumentara la longitud de la goma el\'astica en este estiramiento r\'apido, $dL$ es positivo y $dT$ tambi\'en tendr\'ia que ser positivo, por lo que la temperatura de la goma el\'astica aumentar\'ia. 
+
+ \end{enumerate} % Problema 8-54
+
+\end{enumerate}
+
+\end{document}

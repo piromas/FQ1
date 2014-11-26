@@ -1,0 +1,76 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry} % Adjust page margins
+\usepackage{xcolor,graphicx,framed}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{gensymb}
+%\usepackage{lastpage} % Required to print the total number of pages
+
+\begin{document}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.4mm}} % Defines a new command for the horizontal lines, change thickness here
+
+%----------------------------------------------------------------------------------------
+%	HEADING SECTIONS
+%----------------------------------------------------------------------------------------
+
+\begin{minipage}{0.7\textwidth}
+\begin{flushleft} 
+\textsc{Universidad del Valle de Guatemala \\
+Campus Central \\
+Facultad de Ciencias y Humanidades \\
+Departamento de Qu\'imica \\
+Segundo ciclo, 2014 \\
+Fisicoqu\'imica 1 \\
+}
+\end{flushleft}
+\end{minipage}
+~
+\begin{minipage}{0.2\textwidth}
+\begin{flushright}
+\includegraphics[scale=0.3]{Logo_UVG} % Include a department/university logo
+\end{flushright}
+\end{minipage}\\
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{center}
+\HRule \\[0.4cm]
+{ \bfseries Ejercicios en clase, 2}\\ % Title of your document
+\HRule \\[0.4cm]
+\end{center}
+
+%----------------------------------------------------------------------------------------
+
+\begin{enumerate}
+
+ \item \textit{(McQuarrie 16-58)} El coeficiente de dilataci\'on t\'ermica (coefficient of thermal expansion), $\alpha$, est\'a definido como:
+$$\alpha=\frac{1}{\bar{V}}\left(\frac{\partial \bar{V}}{\partial T}\right)_P$$
+Mostrar que para un gas ideal $\alpha=\frac{1}{T}$. % Problema 2-58
+
+ \item \textit{(McQuarrie 16-59)} La compresibilidad isoterma (isothermal compressibility), $\kappa$, est\'a definida como:
+$$\kappa=-\frac{1}{\bar{V}}\left(\frac{\partial \bar{V}}{\partial P}\right)_T$$
+Mostrar que para un gas ideal $\kappa=\frac{1}{P}$. % Problema 2-59
+
+ \item \textit{(McQuarrie 16-17)} Usar la ecuaci\'on de van der Waals para calcular la presi\'on de un mol de etano a $400.0\;\mbox{K}$ confinado a un volumen de $83.26\;\mbox{cm}^3$. El valor experimental es $400\;\mbox{bar}$. % Problema 2-17
+
+ \item \textit{(McQuarrie 16-22)} Mostrar que la ecuaci\'on de van der Waals para el Arg\'on a $T=142.69\;\mbox{K}$ y $P=35.00\;\mbox{atm}$ puede ser escrita como:
+$$\bar{V}^3-0.3664\bar{V}^2+0.03802\bar{V}-0.001210=0$$ % Problema 2-22
+
+ \item \textit{(McQuarrie 16-15)} Usar la ecuaci\'on de van der Waals para calcular el volumen molar de $CO$ a $200\;\mbox{K}$ y $1000\;\mbox{bar}$. Comparar el resultado con lo que obtendr\'ian usando la ecuaci\'on del gas ideal. El valor experimental es $0.04009\;\mbox{L}\cdot\mbox{mol}^{-1}$. % Problema 2-15
+
+\end{enumerate}
+
+Constantes para la ecuaci\'on de van der Waals:
+\begin{center}
+\begin{tabular}{c|c|c}
+ & $a/\mbox{dm}^6\cdot\mbox{bar}\cdot\mbox{mol}^{-2}$ & $b/\mbox{dm}^3\cdot\mbox{mol}^{-1}$ \\\hline
+Arg\'on & 1.3483 & 0.031830\\
+Etano & 5.5818 & 0.065144 \\
+CO & 1.4734 & 0.039523
+\end{tabular}
+\end{center}
+ 
+\end{document}

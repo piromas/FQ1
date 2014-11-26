@@ -1,0 +1,134 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry} % Adjust page margins
+\usepackage{xcolor,graphicx,framed}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{cases}
+\usepackage{gensymb}
+\usepackage{chemmacros}
+\setlength{\extrarowheight}{0.4cm}
+%\usepackage{lastpage} % Required to print the total number of pages
+
+\begin{document}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.4mm}} % Defines a new command for the horizontal lines, change thickness here
+
+%----------------------------------------------------------------------------------------
+%	HEADING SECTIONS
+%----------------------------------------------------------------------------------------
+
+\begin{minipage}{0.7\textwidth}
+\begin{flushleft} 
+\textsc{Universidad del Valle de Guatemala \\
+Campus Central \\
+Facultad de Ciencias y Humanidades \\
+Departamento de Qu\'imica \\
+Segundo ciclo, 2014 \\
+Fisicoqu\'imica 1 \\
+}
+\end{flushleft}
+\end{minipage}
+~
+\begin{minipage}{0.2\textwidth}
+\begin{flushright}
+\includegraphics[scale=0.3]{Logo_UVG} % Include a department/university logo
+\end{flushright}
+\end{minipage}\\
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{center}
+\HRule \\[0.4cm]
+{ \bfseries Soluciones propuestas a los ejercicios en clase, 6}\\ % Title of your document
+\HRule \\[0.4cm]
+\end{center}
+
+%----------------------------------------------------------------------------------------
+
+\begin{enumerate}
+
+ \item \textbf{\textit{(McQuarrie 20-2)} Sea $z=(x,y)$ y $dz=xy\,dx+y^2\,dy$. Mostrar que $dz$ no es un diferencial exacto.} % Problema 6-2
+
+Si fuera un diferencial exacto, las derivadas cruzadas tendr\'ian que ser iguales. Es decir, si $dz=g(x,y)dx+h(x,y)dy$ fuera exacto, entonces: 
+$$\left(\frac{\partial g(x,y)}{\partial y}\right)_x=\left(\frac{\partial h(x,y)}{\partial x}\right)_y$$
+Pero en este caso, tomando $g(x,y)=xy$ y $h(x,y)=y^2$, tenemos:
+$$\left(\frac{\partial (xy)}{\partial y}\right)_x=x\neq0=\left(\frac{\partial (y^2)}{\partial x}\right)_y$$
+Por lo que $dz$ no es un diferencial exacto.
+
+ \item \textbf{\textit{(McQuarrie 20-6)} Calcular $w$, $q$, $\Delta U$, $\Delta H$ y $\Delta S=\int\frac{dq}{T}$ para un enfriamiento reversible de un gas ideal a volumen constante, $V_1$, de $P_1, V_1, T_1$ a $P_2, V_1, T_4$ seguido por una expansi\'on reversible a presi\'on constante, $P_2$, de $P_2, V_1, T_4$ a $P_2, V_2, T_1$. Comparar el resultado con los caminos $A$, $B+C$ y $D+E$ vistos en clase.} % Problema 6-6
+
+Para el enfriamiento reversible a volumen constante (denominando este proceso como $F$), tenemos que $w_F=-\int PdV=0$. Por la primera ley y usando la capacidad calor\'ifica: 
+$$\Delta U=q+w=q\;\rightarrow\;\Delta U_F=\int_{T_1}^{T_4}C_V(T)dT=q_F$$ 
+Y: 
+$$\Delta H_F=\int_{T_1}^{T_4}C_P(T)dT$$
+Por \'ultimo, como $dU=dq$:
+$$\Delta S_F=\int\frac{dq}{T}=\int_{T_1}^{T_4}\frac{dU}{T}=\int_{T_1}^{T_4}\frac{C_V(T)}{T}dT$$
+
+Para la expansi\'on reversible a presi\'on constante (denominando este proceso como $G$), tenemos que: 
+$$w_G=-\int PdV=-P_2(V_2-V_1)$$
+Adem\'as:
+$$\Delta U_G=\int_{T_4}^{T_1}C_V(T)dT$$
+Y: 
+$$\Delta H_G=\int_{T_4}^{T_1}C_P(T)dT$$
+Entonces: 
+$$\Delta U=q+w\;\rightarrow\;q_G=\Delta U_G-w_G=\int_{T_4}^{T_1}C_V(T)dT+P_2(V_2-V_1)$$ 
+Por \'ultimo:
+
+\begin{center}
+\begin{tabular}{r c l}
+ $\Delta S_G$ & $=$ & $\int\frac{dq}{T}=\int\frac{dU-dw}{T}=\int_{T_4}^{T_1}\frac{C_V(T)}{T}dT+\int_{V_1}^{V_2}\frac{P}{T}dV$ \\
+& $=$ & $\int_{T_4}^{T_1}\frac{C_V(T)}{T}dT+nR\int_{V_1}^{V_2}\frac{dV}{V}=\int_{T_4}^{T_1}\frac{C_V(T)}{T}dT+nR\ln\frac{V_2}{V_1}$
+\end{tabular}
+\end{center}
+
+As\'i que para el proceso total $F+G$, tenemos que:
+$$w_{F+G}=w_{F}+w_{G}=0-P_2(V_2-V_1)=-P_2(V_2-V_1)$$
+$$q_{F+G}=q_{F}+q_{G}=\int_{T_1}^{T_4}C_V(T)dT+\int_{T_4}^{T_1}C_V(T)dT+P_2(V_2-V_1)=P_2(V_2-V_1)$$
+$$\Delta U_{F+G}=\Delta U_{F}+\Delta U_{G}=\int_{T_4}^{T_1}C_V(T)dT+\int_{T_4}^{T_1}C_V(T)dT=0$$
+$$\Delta H_{F+G}=\Delta H_{F}+\Delta H_{G}=\int_{T_4}^{T_1}C_P(T)dT+\int_{T_4}^{T_1}C_P(T)dT=0$$
+$$\Delta S_{F+G}=\Delta S_{F}+\Delta S_{G}=\int_{T_1}^{T_4}\frac{C_V(T)}{T}dT+\int_{T_4}^{T_1}\frac{C_V(T)}{T}dT+nR\ln\frac{V_2}{V_1}=nR\ln\frac{V_2}{V_1}$$
+
+Que para las funciones de estado ($\Delta U$, $\Delta H$ y $\Delta S$) es lo mismo que para los caminos $A$, $B+C$ y $D+E$ vistos en clase, mientras que para $w$ y $q$ es diferente para cada camino (no son funciones de estado).
+
+ \item \textbf{\textit{(McQuarrie 20-11)} Para un gas ideal, en que $U$ es funci\'on s\'olo de $T$ y que obedece la ecuaci\'on de estado
+$$P=\frac{RT}{\bar{V}-b}$$
+donde $b$ es una constante que refleja el tama\~no de las mol\'eculas, calcular $q_{rev}$ y $\Delta S$ para los caminos $A$ y $B+C$ vistos en clase, dado un mol del gas.} % Problema 6-11
+
+Como se tiene un mol del gas ideal, entonces $V=n\bar{V}=\bar{V}$, y: 
+$$P=\frac{RT}{\bar{V}-b}=\frac{RT}{V-b}$$ 
+El camino $A$ era una expansi\'on reversible isot\'ermica de $P_1,V_1,T_1$ a $P_2,V_2,T_1$, por lo que 
+$$\Delta T=0\;\Rightarrow\;\Delta U=0=q+w$$
+As\'i que:
+$$q_{rev}=-w_{rev}=-\left(-\int_{V_1}^{V_2}PdV\right)=\int_{V_1}^{V_2}\frac{RT_1}{V-b}dV=RT_1\ln\frac{V_2-b}{V_1-b}$$
+Y:
+$$\Delta S_A=\int{\frac{dq}{T}}=\frac{1}{T_1}\int dq=\frac{q_{rev}}{T_1}=\frac{RT_1}{T_1}\ln\frac{V_2-b}{V_1-b}=R\ln\frac{V_2-b}{V_1-b}$$
+
+El camino $B$ era una expansi\'on reversible adiab\'atica de $P_1,V_1,T_1$ a $P_3,V_2,T_2$, por lo que $q_B=0$ y $\Delta S_B=\int{\frac{dq}{T}}=0$. Adem\'as, es \'util encontrar una relaci\'on entre las temperaturas y los vol\'umenes, a partir de $\Delta U=w$, de la siguiente manera:
+$$w_{rev}=-\int_{V_1}^{V_2}PdV=-\int_{V_1}^{V_2}\frac{RT}{V-b}dV=\int_{T_1}^{T_2}C_V(T)dT=\Delta U$$
+Dividiendo ambos lados por $T$:
+$$\Rightarrow\;-\int_{V_1}^{V_2}\frac{R}{V-b}dV=\int_{T_1}^{T_2}\frac{C_V(T)}{T}dT$$
+$$\Rightarrow\;-R\ln\frac{V_2-b}{V_1-b}=\int_{T_1}^{T_2}\frac{C_V(T)}{T}dT=-\int_{T_2}^{T_1}\frac{C_V(T)}{T}dT$$
+$$\Rightarrow\;R\ln\frac{V_2-b}{V_1-b}=\int_{T_2}^{T_1}\frac{C_V(T)}{T}dT$$
+
+El camino $C$ era un calentamiento reversible a volumen constante de $P_3,V_2,T_2$ a $P_2,V_2,T_1$, as\'i que $w_{rev}=0$ y: 
+$$\Delta U=q+w=q\;\rightarrow\;\Delta U=\int_{T_2}^{T_1}C_V(T)dT=q_C$$ 
+Como tenemos que $dU=dq$, entonces:
+$$\Delta S_C=\int\frac{dq}{T}=\int\frac{dU}{T}=\int_{T_2}^{T_1}\frac{C_V(T)dT}{T}$$
+
+Con lo que tendr\'iamos para $B+C$:
+$$q_{B+C}=q_{B}+q_{C}=0+\int_{T_2}^{T_1}C_V(T)dT$$
+$$\Delta S_{B+C}=\Delta S_{B}+\Delta S_{C}=0+\int_{T_2}^{T_1}\frac{C_V(T)}{T}dT=R\ln\frac{V_2-b}{V_1-b}=\Delta S_A$$
+Usando la relaci\'on entre temperaturas y vol\'umenes encontrada para el proceso adiab\'atico.
+
+ \item \textbf{\textit{(McQuarrie 20-8)} Calcular el valor de $\Delta S$ cuando un mol de un gas ideal se somete a una expansi\'on reversible e isot\'ermica de $10.0\;\mbox{dm}^3$ a $20.0\;\mbox{dm}^3$.} % Problema 6-8
+
+Como el proceso es isot\'ermico, se tiene que $\Delta T=0$ y como es un gas ideal, se tiene que $\Delta U=0=q+w$, as\'i que:
+$$\Delta S=\int\frac{dq_{rev}}{T}=\frac{1}{T}\int dq_{rev}=\frac{q_{rev}}{T}=\frac{-w_{rev}}{T}=\frac{nRT\ln\frac{V_f}{V_i}}{T}=nR\ln\frac{V_f}{V_i}$$
+Entonces:
+$$\Delta S=(1\;\mbox{mol})(8.314\;\mbox{J}\cdot\mbox{K}^{-1}\cdot\mbox{mol}^{-1})\ln\frac{20.0\;\mbox{dm}^3}{10.0\;\mbox{dm}^3}=+5.76\;\mbox{J}\cdot\mbox{K}^{-1}$$
+
+\end{enumerate}
+
+\end{document}

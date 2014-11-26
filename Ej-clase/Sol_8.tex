@@ -1,0 +1,200 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry} % Adjust page margins
+\usepackage{xcolor,graphicx,framed}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{cases}
+\usepackage{gensymb}
+\usepackage{chemmacros}
+\setlength{\extrarowheight}{0.4cm}
+
+\begin{document}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.4mm}} % Defines a new command for the horizontal lines, change thickness here
+
+%----------------------------------------------------------------------------------------
+%	HEADING SECTIONS
+%----------------------------------------------------------------------------------------
+
+\begin{minipage}{0.7\textwidth}
+\begin{flushleft} 
+\textsc{Universidad del Valle de Guatemala \\
+Campus Central \\
+Facultad de Ciencias y Humanidades \\
+Departamento de Qu\'imica \\
+Segundo ciclo, 2014 \\
+Fisicoqu\'imica 1 \\
+}
+\end{flushleft}
+\end{minipage}
+~
+\begin{minipage}{0.2\textwidth}
+\begin{flushright}
+\includegraphics[scale=0.3]{Logo_UVG} % Include a department/university logo
+\end{flushright}
+\end{minipage}\\
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{center}
+\HRule \\[0.4cm]
+{ \bfseries Soluciones propuestas a los ejercicios en clase, 8}\\ % Title of your document
+\HRule \\[0.4cm]
+\end{center}
+
+%----------------------------------------------------------------------------------------
+
+\begin{enumerate}
+
+ \item 
+ \begin{enumerate}
+  \item \textbf{\textit{(McQuarrie 20-29)} Calcular la entrop\'ia de mezcla cuando dos moles de $\mbox{N}_2\mbox{(g)}$ se mezclan con un mol de $\mbox{O}_2\mbox{(g)}$ a la misma temperatura y presi\'on. Asumir comportamiento ideal.} % Problema 6-29
+
+El cambio de entrop\'ia en la mezcla de gases ideales e inertes a presi\'on y temperatura constantes viene dado por:
+$$\Delta_{mezcla}S=-R\cdot\sum_{i=1}^{N.\,de\,gases}n_i\ln x_i$$
+En este caso tenemos $n_T=n_{N_2}+n_{O_2}=2\;\mbox{mol}+1\;\mbox{mol}=3\;\mbox{mol}$, as\'i que las fracciones molares ser\'ian 
+$$x_{N_2}=\frac{n_{N_2}}{n_T}=\frac{2\;\mbox{mol}}{3\;\mbox{mol}}=\frac{2}{3}\quad\quad\quad\quad x_{O_2}=\frac{n_{O_2}}{n_T}=\frac{1\;\mbox{mol}}{3\;\mbox{mol}}=\frac{1}{3}$$
+Por lo que:
+$$\Delta_{mezcla}S=-(8.314\;\mbox{J}\cdot\mbox{K}^{-1}\cdot\mbox{mol}^{-1})\left[(2\;\mbox{mol})\ln\frac{2}{3}+(1\;\mbox{mol})\ln\frac{1}{3}\right]=15.88\;\mbox{J}\cdot\mbox{K}^{-1}$$
+
+  \item \textbf{\textit{(McQuarrie 20-30)} Mostrar que $\Delta_{mix}\bar{S}=R\ln 2$ si vol\'umenes iguales de cualesquiera dos gases ideales bajo las mismas condiciones son mezclados.} % Problema 6-30
+
+En este caso tendr\'iamos:
+$$\Delta_{mezcla}S=-R\cdot n_1\ln x_1-R\cdot n_2\ln x_2$$
+Pero si originalmente los vol\'umenes de los dos gases ideales eran iguales bajo las mismas condiciones, entonces $n_1=\frac{PV}{RT}=n_2$, as\'i que $n_T=n_1+n_2=2n_1$ y $x_1=x_2=n_1/(2n_1)=1/2$, por lo que:
+$$\Delta_{mezcla}S=-R\cdot n_1\ln\frac{1}{2}-R\cdot n_1\ln\frac{1}{2}=-2R\cdot n_1\ln\frac{1}{2}=2R\cdot n_1\ln 2$$
+Por \'ultimo dividimos entre $n_T=2n_1$ para obtener la cantidad molar:
+$$\Delta_{mezcla}\bar{S}=\frac{\Delta_{mezcla}S}{n_T}=\frac{2R\cdot n_1\ln2}{2n_1}=R\ln 2$$
+
+ \end{enumerate}
+
+ \item \textbf{\textit{(McQuarrie 21-45)} Tomando $S^\standardstate[\mbox{CH}_3\mbox{OH(l)}]=126.8\;\mbox{J}\cdot\mbox{K}^{-1}\cdot\mbox{mol}^{-1}$ a $298.15\;\mbox{K}$ y dado que $T_{vap}=337.7\;\mbox{K}$, $\Delta_{vap}\bar{H}(T_{vap})=36.5\;\mbox{kJ}\cdot\mbox{mol}^{-1}$, \\ $\bar{C}_P[\mbox{CH}_3\mbox{OH(l)}]=81.12\;\mbox{J}\cdot\mbox{K}^{-1}\cdot\mbox{mol}^{-1}$ y $\bar{C}_P[\mbox{CH}_3\mbox{OH(g)}]=43.8\;\mbox{J}\cdot\mbox{K}^{-1}\cdot\mbox{mol}^{-1}$, calcular el valor de $S^\standardstate[\mbox{CH}_3\mbox{OH(g)}]$ a $298.15\;\mbox{K}$ y compararlo con el valor experimental de $239.8\;\mbox{J}\cdot\mbox{K}^{-1}\cdot\mbox{mol}^{-1}$.} % Problema 7-45
+
+Para calcular $S^\standardstate[\mbox{CH}_3\mbox{OH(g)}]$ a $298.15\;\mbox{K}$, podemos determinar $\Delta_{vap}\bar{S}$ a $298.15\;\mbox{K}$, con la informaci\'on dada, usando el siguiente ciclo: \\
+\begin{center}
+\begin{tabular}{r c c c l c | c}
+& & & & & \quad & T \\\hline
+& $\mbox{CH}_3\mbox{OH(l)}$ & $\xrightarrow{\Delta_{vap}S^\standardstate}$ & $\mbox{CH}_3\mbox{OH(g)}$ & & \quad\quad & $298.15\;\mbox{K}$ \\
+ ${\bar{C}_P\mbox{(l)}}$ & $\downarrow$ & & $\uparrow$ & ${\bar{C}_P\mbox{(g)}}$ & \quad\quad & \\
+& $\mbox{CH}_3\mbox{OH(l)}$ & $\xrightarrow{\Delta_{vap}S^\standardstate}$ & $\mbox{CH}_3\mbox{OH(g)}$ & & \quad\quad & $337.7\;\mbox{K}$ \\\hline
+\end{tabular}
+\end{center}
+
+Recordando que:
+$$\Delta_{vap}\bar{S}^\standardstate=S^\standardstate[\mbox{CH}_3\mbox{OH(g)}]-S^\standardstate[\mbox{CH}_3\mbox{OH(l)}]$$
+Con el ciclo, vemos la siguiente relaci\'on: \\
+\begin{center}
+\begin{tabular}{r c l}
+$\Delta_{vap}\bar{S}(298.15\;\mbox{K})$ & $=$ & $\int_{298.15}^{337.7}\frac{\bar{C}_P[\mbox{CH}_3\mbox{OH(l)}]}{T}dT+\Delta_{vap}\bar{S}(337.7\;\mbox{K})$ \\
+& & $\quad+\int_{337.7}^{298.15}\frac{\bar{C}_P[\mbox{CH}_3\mbox{OH(g)}]}{T}dT$ \\
+& $=$ & $\bar{C}_P[\mbox{CH}_3\mbox{OH(l)}]\int_{298.15}^{337.7}\frac{dT}{T}+\Delta_{vap}\bar{S}(337.7\;\mbox{K})$ \\
+& & $\quad+\bar{C}_P[\mbox{CH}_3\mbox{OH(g)}]\int_{337.7}^{298.15}\frac{dT}{T}$ \\
+& $=$ & $\bar{C}_P[\mbox{CH}_3\mbox{OH(l)}]\ln\frac{337.7}{298.15}+\Delta_{vap}\bar{S}(337.7\;\mbox{K})$ \\
+& & $\quad+\bar{C}_P[\mbox{CH}_3\mbox{OH(g)}]\ln\frac{298.15}{337.7}$
+\end{tabular}
+\end{center}
+
+El cambio de entrop\'ia para la reacci\'on de vaporizaci\'on a la temperatura normal de ebullici\'on lo, como es un proceso reversible a esa temperatura, lo podemos calcular as\'i:
+$$\Delta_{vap}\bar{S}(337.7\;\mbox{K})=\frac{\Delta_{vap}\bar{H}(T_{vap})}{T_{vap}}=\frac{36.5\;\mbox{kJ}\cdot\mbox{mol}^{-1}}{337.7\;\mbox{K}}=108.1\;\mbox{J}\cdot\mbox{K}^{-1}\cdot\mbox{mol}^{-1}$$
+Con esto encontramos que: \\
+\begin{center}
+\begin{tabular}{r c l}
+$\Delta_{vap}\bar{S}(298.15\;\mbox{K})$ & $=$ & $(81.12\;\mbox{J}\cdot\mbox{K}^{-1}\cdot\mbox{mol}^{-1})\ln\frac{337.7}{298.15}+108.1\;\mbox{J}\cdot\mbox{K}^{-1}\cdot\mbox{mol}^{-1}$ \\
+& & $\quad+(43.8\;\mbox{J}\cdot\mbox{K}^{-1}\cdot\mbox{mol}^{-1})\ln\frac{298.15}{337.7}$ \\
+& $=$ & $112.7\;\mbox{J}\cdot\mbox{K}^{-1}\cdot\mbox{mol}^{-1}$
+\end{tabular}
+\end{center}
+
+Entonces, usando esto y despejando para $S^\standardstate[\mbox{CH}_3\mbox{OH(g)}]$: \\
+\begin{center}
+\begin{tabular}{r c l}
+$S^\standardstate[\mbox{CH}_3\mbox{OH(g)}]$ & $=$ & $\Delta_{vap}\bar{S}^\standardstate+S^\standardstate[\mbox{CH}_3\mbox{OH(l)}]$ \\
+& $=$ & $112.7\;\mbox{J}\cdot\mbox{K}^{-1}\cdot\mbox{mol}^{-1}+126.8\;\mbox{J}\cdot\mbox{K}^{-1}\cdot\mbox{mol}^{-1}$ \\
+& $=$ & $239.5\;\mbox{J}\cdot\mbox{K}^{-1}\cdot\mbox{mol}^{-1}$
+\end{tabular}
+\end{center}
+
+Que es bastante cercano al valor experimental (tomando en cuenta que estamos usando las capacidades calor\'ificas como constantes).
+
+ \item \textbf{\textit{(McQuarrie 21-42)} Arreglar las siguientes reacciones en orden ascendente de sus valores de $\Delta_rS^\standardstate$ (sin consultar ninguna referencia de valores).}
+ \begin{enumerate}
+  \item $\mbox{S(s)}+\mbox{O}_2\mbox{(g)}\;\rightarrow\;\mbox{SO}_2\mbox{(g)}$
+  \item $\mbox{H}_2\mbox{(g)}+\mbox{O}_2\mbox{(g)}\;\rightarrow\;\mbox{H}_2\mbox{O}_2\mbox{(l)}$
+  \item $\mbox{CO(g)}+3\,\mbox{H}_2\mbox{(g)}\;\rightarrow\;\mbox{CH}_4\mbox{(g)}+\mbox{H}_2\mbox{O(l)}$
+  \item $\mbox{C(s)}+\mbox{H}_2\mbox{O(g)}\;\rightarrow\;\mbox{CO(g)}+\mbox{H}_2\mbox{(g)}$
+ \end{enumerate} % Problema 7-42
+
+De los cambios de entrop\'ia que hemos estudiado, los que involucran gases por lo general tienen mayor magnitud (como la vaporizaci\'on o expansi\'on de gases), lo que se debe al cambio de volumen considerable (comparado con un l\'iquidos o s\'olidos). Por lo que en este caso podemos enfocarnos en estudiar c\'omo cambia el volumen debido al cambio de moles de gases en las reacciones. En la primera reacci\'on se mantiene el mismo n\'umero de moles de gases ($\Delta n_{gases}=1-1=0$), en la segunda se pasa de tener dos moles a no tener moles de gases ($\Delta n_{gases}=0-2=-2$), en la tercera se pasa de tener 3 moles de gases a solo un mol de gas ($\Delta n_{gases}=1-4=-3$) y en la cuarta se pasa de tener un mol de gas a tener dos moles de gases ($\Delta n_{gases}=2-1=1$). Entre mayor sea el cambio de moles de gases, mayor ser\'a el cambio de entrop\'ia, as\'i que el orden ascendente quedar\'ia:
+$$\Delta_rS^\standardstate (c)<\Delta_rS^\standardstate(b)<\Delta_rS^\standardstate (a) < \Delta_rS^\standardstate (d)$$
+
+ \item \textbf{\textit{(McQuarrie 22-1)} La entalp\'ia molar de vaporizaci\'on del benceno en su punto normal de ebullici\'on ($80.09\celsius$) es $30.72\;\mbox{kJ}\cdot\mbox{mol}^{-1}$. Asumiendo que $\Delta_{vap}\bar{H}$ y $\Delta_{vap}\bar{S}$ se mantienen constantes en sus valores a $80.09\celsius$, calcular el valor de $\Delta_{vap}\bar{G}$ a $75.0\celsius$, $80.09\celsius$ y $85.0\celsius$. Interpretar los resultados f\'isicamente.} % Problema 8-1
+
+El proceso en su punto normal de ebullici\'on ($T_{vap}=80.09\celsius+273.15=353.24\;\mbox{K}$) es reversible, as\'i que podemos calcular el cambio de entrop\'ia de la siguiente manera:
+$$\Delta_{vap}\bar{S}(T_{vap})=\frac{\Delta_{vap}\bar{H}(T_{vap})}{T_{vap}}$$
+Usando el valor de $\Delta_{vap}\bar{H}$ dado:
+$$\Delta_{vap}\bar{S}(353.24\;\mbox{K})=\frac{30.72\;\mbox{kJ}\cdot\mbox{mol}^{-1}}{353.24\;\mbox{K}}=86.99\;\mbox{J}\cdot{K}^{-1}\cdot\mbox{mol}^{-1}$$
+Asumiendo que $\Delta_{vap}\bar{H}$ y $\Delta_{vap}\bar{S}$ se mantienen constantes en esos valores, podemos calcular $\Delta_{vap}\bar{G}$ a cada temperatura pedida. A $T=75.0\celsius+273.15=348.15\;\mbox{K}$ ser\'ia: \\
+\begin{center}
+\begin{tabular}{r c l}
+$\Delta_{vap}\bar{G}$ & $=$ & $\Delta_{vap}\bar{H}-T\Delta_{vap}\bar{S}$ \\
+& $=$ & $30.72\;\mbox{kJ}\cdot\mbox{mol}^{-1}-(348.15\;\mbox{K})(86.99\;\mbox{J}\cdot{K}^{-1}\cdot\mbox{mol}^{-1})$ \\
+& $=$ & $0.44\;\mbox{kJ}\cdot\mbox{mol}^{-1}$
+\end{tabular}
+\end{center}
+
+Lo que indica que el proceso no es espont\'aneo a esa temperatura. A $T=80.09\celsius+273.15=353.24\;\mbox{K}$ ser\'ia: \\
+\begin{center}
+\begin{tabular}{r c l}
+$\Delta_{vap}\bar{G}$ & $=$ & $\Delta_{vap}\bar{H}-T\Delta_{vap}\bar{S}$ \\
+& $=$ & $30.72\;\mbox{kJ}\cdot\mbox{mol}^{-1}-(353.24\;\mbox{K})(86.99\;\mbox{J}\cdot{K}^{-1}\cdot\mbox{mol}^{-1})$ \\
+& $=$ & $0$
+\end{tabular}
+\end{center}
+
+Lo que indica que el proceso est\'a en equilibrio a esa temperatura. Por \'ultimo, a $T=85.0\celsius+273.15=358.15\;\mbox{K}$ ser\'ia: \\
+\begin{center}
+\begin{tabular}{r c l}
+$\Delta_{vap}\bar{G}$ & $=$ & $\Delta_{vap}\bar{H}-T\Delta_{vap}\bar{S}$ \\
+& $=$ & $30.72\;\mbox{kJ}\cdot\mbox{mol}^{-1}-(358.15\;\mbox{K})(86.99\;\mbox{J}\cdot{K}^{-1}\cdot\mbox{mol}^{-1})$ \\
+& $=$ & $-0.43\;\mbox{kJ}\cdot\mbox{mol}^{-1}$
+\end{tabular}
+\end{center}
+
+Lo que indica que el proceso es espont\'aneo a esa temperatura.
+
+ \item \textbf{\textit{(McQuarrie 21-47)} Usar datos de una tabla de entrop\'ias est\'andar para calcular el valor de $\Delta_rS^\standardstate$ de las siguientes reacciones a $25\celsius$ y un bar.}
+ \begin{enumerate}
+  \item $\mbox{C(s, grafito)}+\mbox{O}_2\mbox{(g)}\;\rightarrow\;\mbox{CO}_2\mbox{(g)}$
+  \item $\mbox{CH}_4\mbox{(g)}+2\,\mbox{O}_2\mbox{(g)}\;\rightarrow\;\mbox{CO}_2\mbox{(g)}+2\,\mbox{H}_2\mbox{O(l)}$
+  \item $\mbox{C}_2\mbox{H}_2\mbox{(g)}+\mbox{H}_2\mbox{(g)}\;\rightarrow\;\mbox{C}_2\mbox{H}_4\mbox{(g)}$
+ \end{enumerate} % Problema 7-47
+
+Cada reacci\'on est\'a balanceada, as\'i que usando los valores de $S^\standardstate$ de cada reactivo y producto, podemos calcular $\Delta_rS^\standardstate$ de la siguiente manera:
+$$\Delta_r\bar{S}^\standardstate=\sum_{Productos}\nu_i\bar{S}_i^\standardstate-\sum_{Reactivos}\nu_i\bar{S}_i^\standardstate$$
+As\'i que para cada reacci\'on, tendr\'iamos lo siguiente: \\
+\begin{tabular}{r c l}
+$\Delta_r\bar{S}^\standardstate(a)$ & $=$ & $\bar{S}^\standardstate[\mbox{CO}_2\mbox{(g)}]-\bar{S}^\standardstate[\mbox{C(s, grafito)}]-\bar{S}^\standardstate[\mbox{O}_2\mbox{(g)}]$ \\
+& $=$ & $(213.74\;\mbox{J}\cdot\mbox{K}^{-1}\cdot\mbox{mol}^{-1})-(5.740\;\mbox{J}\cdot\mbox{K}^{-1}\cdot\mbox{mol}^{-1})$ \\
+& & $\quad-(205.138\;\mbox{J}\cdot\mbox{K}^{-1}\cdot\mbox{mol}^{-1})$ \\
+& $=$ & $2.86\;\mbox{J}\cdot\mbox{K}^{-1}\cdot\mbox{mol}^{-1}$
+\end{tabular}
+
+\begin{tabular}{r c l}
+$\Delta_r\bar{S}^\standardstate(b)$ & $=$ & $\bar{S}^\standardstate[\mbox{CO}_2\mbox{(g)}]+2\times \bar{S}^\standardstate[\mbox{H}_2\mbox{O(l)}]-\bar{S}^\standardstate[\mbox{CH}_4\mbox{(g)}]-2\times \bar{S}^\standardstate[\mbox{O}_2\mbox{(g)}]$ \\
+& $=$ & $(213.74\;\mbox{J}\cdot\mbox{K}^{-1}\cdot\mbox{mol}^{-1})+2\times (69.91\;\mbox{J}\cdot\mbox{K}^{-1}\cdot\mbox{mol}^{-1})$ \\
+& & $\quad-(186.26\;\mbox{J}\cdot\mbox{K}^{-1}\cdot\mbox{mol}^{-1})-2\times (205.138\;\mbox{J}\cdot\mbox{K}^{-1}\cdot\mbox{mol}^{-1})$ \\
+& $=$ & $-242.98\;\mbox{J}\cdot\mbox{K}^{-1}\cdot\mbox{mol}^{-1}$
+\end{tabular}
+
+\begin{tabular}{r c l}
+$\Delta_r\bar{S}^\standardstate(c)$ & $=$ & $\bar{S}^\standardstate[\mbox{C}_2\mbox{H}_4\mbox{(g)}]-\bar{S}^\standardstate[\mbox{C}_2\mbox{H}_2\mbox{(g)}]-\bar{S}^\standardstate[\mbox{H}_2\mbox{(g)}]$ \\
+& $=$ & $(219.56\;\mbox{J}\cdot\mbox{K}^{-1}\cdot\mbox{mol}^{-1})-(200.94\;\mbox{J}\cdot\mbox{K}^{-1}\cdot\mbox{mol}^{-1})$ \\
+& & $\quad-(130.684\;\mbox{J}\cdot\mbox{K}^{-1}\cdot\mbox{mol}^{-1})$ \\
+& $=$ & $-112.06\;\mbox{J}\cdot\mbox{K}^{-1}\cdot\mbox{mol}^{-1}$
+\end{tabular}
+
+\end{enumerate}
+
+\end{document}

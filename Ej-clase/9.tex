@@ -1,0 +1,86 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry} % Adjust page margins
+\usepackage{xcolor,graphicx,framed}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{gensymb}
+\usepackage{chemmacros}
+%\usepackage{lastpage} % Required to print the total number of pages
+
+\begin{document}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.4mm}} % Defines a new command for the horizontal lines, change thickness here
+
+%----------------------------------------------------------------------------------------
+%	HEADING SECTIONS
+%----------------------------------------------------------------------------------------
+
+\begin{minipage}{0.7\textwidth}
+\begin{flushleft} 
+\textsc{Universidad del Valle de Guatemala \\
+Campus Central \\
+Facultad de Ciencias y Humanidades \\
+Departamento de Qu\'imica \\
+Segundo ciclo, 2014 \\
+Fisicoqu\'imica 1 \\
+}
+\end{flushleft}
+\end{minipage}
+~
+\begin{minipage}{0.2\textwidth}
+\begin{flushright}
+\includegraphics[scale=0.3]{Logo_UVG} % Include a department/university logo
+\end{flushright}
+\end{minipage}\\
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{center}
+\HRule \\[0.4cm]
+{ \bfseries Ejercicios en clase, 9}\\ % Title of your document
+\HRule \\[0.4cm]
+\end{center}
+
+%----------------------------------------------------------------------------------------
+
+\begin{enumerate}
+
+ \item \textit{(Chang 6.29)} Si se disuelve nitrato de amonio en agua, la soluci\'on se enfr\'ia. ?`Qu\'e conclusi\'on puede obtener acerca de $\Delta S^\standardstate$ del proceso? % Problema 6.29 de Chang
+
+ \item \textit{(Chang 6.5)} De manera aproximada podemos suponer que las prote\'inas existen en estado nativo (o que funcionan fisiol\'ogicamente) o en estado desnaturalizado. La entalp\'ia molar est\'andar y la entrop\'ia de desnaturalizaci\'on de una prote\'ina son $512\;\mbox{kJ}\cdot\mbox{mol}^{-1}$ y $1.60\;\mbox{kJ}\cdot\mbox{K}^{-1}\cdot\mbox{mol}^{-1}$, respectivamente. Explique los signos y magnitudes de estas cantidades y calcule la temperatura a la cual el proceso de desnaturalizaci\'on se hace espont\'aneo. % Problema 6.5 de Chang
+
+ \item \textit{(McQuarrie 22-2)} La entalp\'ia molar de vaporizaci\'on del benceno en su punto normal de ebullici\'on ($80.09\celsius$) es $30.72\;\mbox{kJ}\cdot\mbox{mol}^{-1}$. Tomar las capacidades molares del benceno l\'iquido y gaseoso como $136.3\;\mbox{J}\cdot\mbox{K}^{-1}\cdot\mbox{mol}^{-1}$ y $82.4\;\mbox{J}\cdot\mbox{K}^{-1}\cdot\mbox{mol}^{-1}$, respectivamente, para calcular el valor de $\Delta_{vap}\bar{G}$ a $75.0\celsius$, $80.09\celsius$ y $85.0\celsius$. Interpretar los resultados f\'isicamente. % Problema 8-2
+
+ \item \textit{(Chang 6.1)} Una cantidad de $0.35\;\mbox{moles}$ de un gas ideal que se encuentra inicialmente a $15.6\celsius$ se dilata de $1.2\;\mbox{L}$ a $7.4\;\mbox{L}$. Calcular los valores de $w$, $q$, $\Delta U$, $\Delta S$ y $\Delta G$ si el proceso se lleva a cabo:
+ \begin{enumerate}
+  \item de manera isot\'ermica y reversible, y
+  \item de manera isot\'ermica e irreversible contra una presi\'on extrena de $1.0\;\mbox{atm}$.
+ \end{enumerate} % Problema 6.1 de Chang 
+
+ \item \textit{(McQuarrie 22-18)} Mostrar que
+$$dH=\left[V-T\left(\frac{\partial V}{\partial T}\right)_P\right]dP+C_PdT$$ 
+?`Son $P$ y $T$ las variables naturales de $H$? % Problema 8-18
+
+ \item \textit{(McQuarrie 22-54)} Cuando una goma el\'astica se estira, ejerce una fuerza de restauraci\'on, $f$, que est\'a dada en funci\'on de su longitud $L$ y de su temperatura $T$. El trabajo involucrado es:
+$$w=\int f(L,T)dL$$
+?`Por qu\'e no hay un signo negativo como con el trabajo $P-V$? 
+ \begin{enumerate}
+  \item Asumir que no hay cambio de volumen en la goma el\'astica cuando se estira; determinar $dU$ y derivarlo con respecto a $L$ a temperatura constante, para encontrar que:
+$$\left(\frac{\partial U}{\partial L}\right)_T=T\left(\frac{\partial S}{\partial L}\right)_T+f$$
+  \item Usando la definici\'on de $A=U-TS$ encontrar $dA$ para mostrar que su relaci\'on de Maxwell es:
+$$\left(\frac{\partial f}{\partial T}\right)_L=-\left(\frac{\partial S}{\partial L}\right)_T$$
+Sustituir la ecuaci\'on anterior en el resultado del inciso anterior para encontrar:
+$$\left(\frac{\partial U}{\partial L}\right)_T=f-T\left(\frac{\partial f}{\partial T}\right)_L$$
+  \item Para muchos sistemas el\'asticos, la dependencia observada de la fuerza con la temperatura es lineal. As\'i que podemos definir una goma el\'astica ideal como:
+$$f=T\phi(L)\quad\quad\mbox{(goma elastica ideal)}$$
+Mostrar que $(\partial U/\partial L)_T=0$ para una goma el\'astica ideal.
+  \item Ahora consideraremos qu\'e sucede cuando se estira la goma el\'astica r\'apidamente (es decir, adiab\'aticamente). En este caso $dU=dw$. Definiendo la capacidad calor\'ifica como $(\partial U/\partial T)_L=C_L$, usar el hecho que $U$ depende s\'olo de la temperatura para una goma el\'astica ideal para mostrar que:
+$$C_LdT=fdL$$
+Argumentar que si la goma el\'astica se estira r\'apidamente, su temperatura aumentar\'a. Verificar el resultado al colocar una goma el\'astica en contra del labio superior y estirarla r\'apidamente.
+ \end{enumerate} % Problema 8-54
+
+\end{enumerate}
+ 
+\end{document}

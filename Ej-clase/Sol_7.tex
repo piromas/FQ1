@@ -1,0 +1,118 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry} % Adjust page margins
+\usepackage{xcolor,graphicx,framed}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{cases}
+\usepackage{gensymb}
+\usepackage{chemmacros}
+\setlength{\extrarowheight}{0.45cm}
+%\usepackage{lastpage} % Required to print the total number of pages
+
+\begin{document}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.4mm}} % Defines a new command for the horizontal lines, change thickness here
+
+%----------------------------------------------------------------------------------------
+%	HEADING SECTIONS
+%----------------------------------------------------------------------------------------
+
+\begin{minipage}{0.7\textwidth}
+\begin{flushleft} 
+\textsc{Universidad del Valle de Guatemala \\
+Campus Central \\
+Facultad de Ciencias y Humanidades \\
+Departamento de Qu\'imica \\
+Segundo ciclo, 2014 \\
+Fisicoqu\'imica 1 \\
+}
+\end{flushleft}
+\end{minipage}
+~
+\begin{minipage}{0.2\textwidth}
+\begin{flushright}
+\includegraphics[scale=0.3]{Logo_UVG} % Include a department/university logo
+\end{flushright}
+\end{minipage}\\
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{center}
+\HRule \\[0.4cm]
+{ \bfseries Soluciones propuestas a los ejercicios en clase, 7}\\ % Title of your document
+\HRule \\[0.4cm]
+\end{center}
+
+%----------------------------------------------------------------------------------------
+
+\begin{enumerate}
+
+ \item \textbf{\textit{(McQuarrie 20-13)} Calcular el cambio de entrop\'ia de $2.00\;\mbox{mol}$ de $\mbox{H}_2\mbox{O(l)}$ (tomar $\bar{C}_P=75.2\;\mbox{J}\cdot\mbox{K}^{-1}\cdot\mbox{mol}^{-1}$, independiente de la temperatura) cuando se calienta de $10\celsius$ a $90\celsius$ a presi\'on constante.} % Problema 6-13.
+
+Como es un proceso a presi\'on constante $dq_{rev}=dq_P=dH=C_PdT$, as\'i que:
+$$\Delta S=\int\frac{dq_{rev}}{T}=\int_{T_1}^{T_2}\frac{dH}{T}=\int_{T_1}^{T_2}\frac{C_P}{T}dT=C_P\int_{T_1}^{T_2}\frac{dT}{T}=C_P\ln\frac{T_2}{T_1}$$
+En este caso:
+$$C_P=n\cdot\bar{C}_P=(2.00\;\mbox{mol})(75.2\;\mbox{J}\cdot\mbox{K}^{-1}\cdot\mbox{mol}^{-1})=150.4\;\mbox{J}\cdot\mbox{K}^{-1}$$
+El cambio de temperatura va de $T_1=10\celsius+273.15=283.15\;\mbox{K}$ a $T_2=90\celsius+273.15=363.15\;\mbox{K}$, entonces:
+$$\Delta S=C_P\ln\frac{T_2}{T_1}=(150.4\;\mbox{J}\cdot\mbox{K}^{-1})\ln\frac{363.15\;\mbox{K}}{283.15\;\mbox{K}}=37.4\;\mbox{J}\cdot\mbox{K}^{-1}$$
+
+ \item \textbf{\textit{(McQuarrie 20-26)} Calcular el cambio de entrop\'ia del sistema, de los alrededores y el cambio total de entrop\'ia cuando un mol de un gas ideal se expande isot\'ermicamente en contra del vac\'io, con una presi\'on interna inicial de $10.0\;\mbox{bar}$ hasta una presi\'on final de $2.00\;\mbox{bar}$ a $300\;\mbox{K}$.} % Problema 6-26
+
+Para determinar el cambio de entrop\'ia del sistema, necesitamos calcular $q_{rev}$. Como es un gas ideal y la expansi\'on es isot\'ermica: 
+$$dU=dq_{rev}+dw_{rev}=0\;\Rightarrow\;dq_{rev}=-dw_{rev}=-(-PdV)=PdV$$ 
+Usando la ecuaci\'on de estado de un gas ideal $PV=nRT$ \'o $P/T=nR/V$), tenemos que:
+$$\Delta S_{sis}=\int\frac{dq_{rev}}{T}=\int_{V_1}^{V_2}\frac{P}{T}dV=nR\int_{V_1}^{V_2}\frac{dV}{V}=nR\ln\frac{V_2}{V_1}=nR\ln\frac{P_1}{P_2}$$
+Usando los datos dados:
+$$\Delta S_{sis}=(1\;\mbox{mol})(8.314\;\mbox{J}\cdot\mbox{K}^{-1}\cdot\mbox{mol}^{-1})\ln\frac{10.0\;\mbox{bar}}{2.00\;\mbox{bar}}=13.4\;\mbox{J}\cdot\mbox{K}^{-1}$$
+
+Para determinar el cambio de entrop\'ia de los alrededores, necesitamos determinar $q_{alr}=-q_{sis}$. Para una expansi\'on en contra del vac\'io se tiene que $w=0$. Como es un gas ideal y la expansi\'on es isot\'ermica, $\Delta U=q+w=0\;\Rightarrow\;q_{sis}=0=-q_{alr}$, as\'i que:
+$$\Delta S_{alr}=\frac{q_{alr}}{T_{alr}}=0$$
+
+Por lo que el cambio de entrop\'ia total es:
+$$\Delta S_{tot}=\Delta S_{alr}+\Delta S_{sis}=0+13.4\;\mbox{J}\cdot\mbox{K}^{-1}=+13.4\;\mbox{J}\cdot\mbox{K}^{-1}$$
+
+ \item \textbf{Vaporizaci\'on en el punto normal de ebullici\'on ($T_{vap}$) de una sustancia (el punto de ebullici\'on a una atm\'osfera de presi\'on) puede ser considerado como un proceso reversible dado que si la temperatura es disminuida infinitesimalmente debajo de $T_{vap}$ todo el vapor se condensar\'a a l\'iquido, mientras que si se aumenta infinitesimalmente encima de $T_{vap}$ todo el l\'iquido se evaporar\'a. Lo mismo aplica para la fusi\'on en el punto normal de fusi\'on ($T_{fus}$).}
+\begin{enumerate}
+ \item \textbf{\textit{(McQuarrie 20-18)} Calcular el cambio de entrop\'ia cuando dos moles de agua se evaporan a $100.0\celsius$. El valor de $\Delta_{vap}\bar{H}$ es $40.65\;\mbox{kJ}\cdot\mbox{mol}^{-1}$. Comentar sobre el signo de $\Delta_{vap}S$.} % Problema 6-18
+
+Como es un proceso a temperatura constante y presi\'on constante $q_P=\Delta H$, y tenemos que:
+$$\Delta_{vap}S=\int\frac{dq_{rev}}{T_{vap}}=\frac{1}{T_{vap}}\int dq_{rev}=\frac{q_{rev}}{T_{vap}}=\frac{\Delta_{vap}H}{T_{vap}}$$
+En este caso $\Delta_{vap}H=n\cdot\Delta_{vap}\bar{H}=(2\;\mbox{mol})(40.65\;\mbox{kJ}\cdot\mbox{mol}^{-1})=81.3\;\mbox{kJ}$ a $T=100.0\celsius+273.15=373.15\;\mbox{K}$, por lo que:
+$$\Delta_{vap}S=\frac{81.3\;\mbox{kJ}}{373.15\;\mbox{K}}=217.9\;\mbox{J}\cdot\mbox{K}^{-1}$$
+
+ \item \textbf{\textit{(McQuarrie 20-19)} Calcular el cambio de entrop\'ia cuando dos moles de agua se funden a $0\celsius$. El valor de $\Delta_{fus}\bar{H}$ es $6.01\;\mbox{kJ}\cdot\mbox{mol}^{-1}$. Comparar con la respuesta obtenida en el inciso anterior. ?`Por qu\'e es $\Delta_{vap}S$ mucho m\'as grande que $\Delta_{fus}S$?} % Problema 6-19
+
+Como es un proceso a temperatura constante y presi\'on constante $q_P=\Delta H$, y tenemos que:
+$$\Delta_{fus}S=\int\frac{dq_{rev}}{T_{fus}}=\frac{1}{T_{fus}}\int dq_{rev}=\frac{q_{rev}}{T_{fus}}=\frac{\Delta_{fus}H}{T_{fus}}$$
+En este caso tenemos $\Delta_{fus}H=n\cdot\Delta_{fus}\bar{H}=(2\;\mbox{mol})(6.01\;\mbox{kJ}\cdot\mbox{mol}^{-1})=12.02\;\mbox{kJ}$ a $T=0\celsius+273.15=273.15\;\mbox{K}$, por lo que:
+$$\Delta_{fus}S=\frac{12.02\;\mbox{kJ}}{273.15\;\mbox{K}}=44.0\;\mbox{J}\cdot\mbox{K}^{-1}$$
+
+N\'otese que $\Delta_{fus}S<\Delta_{vap}S$ lo cual se puede entender por el mucho mayor cambio de volumen en la vaporizaci\'on que en la fusi\'on.
+
+\end{enumerate}
+
+ \item \textbf{\textit{(McQuarrie 20-27)} La capacidad calor\'ifica molar del 1-buteno puede ser expresada como}
+$$\bar{C}_P(T)/R=0.05641+(0.04635\;\mbox{K}^{-1})T-(2.392\times 10^{-5}\;\mbox{K}^{-2})T^2+(4.80\times 10^{-9}\;\mbox{K}^{-3})T^3$$
+\textbf{en el rango de temperatura $300\;\mbox{K}<T<1500\;\mbox{K}$. Calcular el cambio de entrop\'ia cuando un mol de 1-buteno es calentado de $300\;\mbox{K}$ a $1000\;\mbox{K}$ a presi\'on constante.} % Problema 6-27
+
+Para un calentamiento a presi\'on constante, tenemos que: 
+$$dq_{rev}=dq_P=dH=C_P(T)dT$$
+Usando $C_P=n\bar{C}_P$ con $1\;\mbox{mol}$, calculamos el cambio de entrop\'ia de la siguiente manera:
+
+\begin{center}
+\begin{tabular}{r c l}
+ $\Delta S$ & $=$ & $\int\frac{dq_{rev}}{T}=\int_{T_1}^{T_2}\frac{C_P(T)}{T}dT$ \\
+& $=$ & $R\times(1\;\mbox{mol})\int_{300}^{1000}\left[\frac{0.05641}{T}+(0.04635\;\mbox{K}^{-1})-(2.392\times 10^{-5}\;\mbox{K}^{-2})T\right.$ \\
+& & $\quad\left.+(4.80\times 10^{-9}\;\mbox{K}^{-3})T^2\right]dT$ \\
+& $=$ & $R\times(1\;\mbox{mol})\left[0.05641\ln T+(0.04635\;\mbox{K}^{-1})T-(2.392\times 10^{-5}\;\mbox{K}^{-2})\frac{T^2}{2}\right.$ \\
+& & $\quad\left.\left.+(4.80\times 10^{-9}\;\mbox{K}^{-3})\frac{T^3}{3}\right]\right|_{300}^{1000}$ \\
+& $=$ & $(8.314\;\mbox{J}\cdot\mbox{K}^{-1}\cdot\mbox{mol}^{-1})(1\;\mbox{mol})(23.1861)$ \\
+& $=$ & $192.77\;\mbox{J}\cdot\mbox{K}^{-1}$
+\end{tabular}
+\end{center}
+
+\end{enumerate}
+
+\end{document}
